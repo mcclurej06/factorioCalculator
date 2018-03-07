@@ -32,8 +32,12 @@ class Chain(
 
                 println("lcm for ${lastProcess.second.second} and $multiplier is $leastCommonMultiple")
 
+                println("######################")
+
                 processes = processes.map {
-                    val multiplier1 = leastCommonMultiple / lastProcess.second.second.toDouble()
+                    println("maping: $it")
+                    val second = lastProcess.second.second
+                    val multiplier1 = leastCommonMultiple / second.toDouble()
                     it.update(multiplier1)
                 }.toMutableList()
 
@@ -57,7 +61,22 @@ typealias Process = Pair<Pair<String, Int>, Pair<String, Int>>
 fun Process.update(multiplier: Double): Process {
     println("updating $this")
     println("updating by $multiplier")
-    val updated = foo.Process(first.first to (first.second * multiplier).toInt(), second.first to (second.second * multiplier).toInt())
+
+
+    val firstMultiplied = first.second * multiplier
+    val secondMultiplied = second.second * multiplier
+
+
+
+    val firstResult = Math.max(firstMultiplied.toInt(), 1)
+    val secondResult = Math.max(secondMultiplied.toInt(), 1)
+
+
+
+    val first1 = first.first to firstResult
+    val second1 = second.first to secondResult
+
+    val updated = foo.Process(first1, second1)
     println("updated $updated")
     println()
     return updated

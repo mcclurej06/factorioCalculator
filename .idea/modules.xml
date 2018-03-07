@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/factorioChainCalculator.iml" filepath="$PROJECT_DIR$/.idea/modules/factorioChainCalculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/factorioChainCalculator_main.iml" filepath="$PROJECT_DIR$/.idea/modules/factorioChainCalculator_main.iml" group="factorioChainCalculator" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/factorioChainCalculator_test.iml" filepath="$PROJECT_DIR$/.idea/modules/factorioChainCalculator_test.iml" group="factorioChainCalculator" />
+    </modules>
+  </component>
+</project>
